@@ -24,22 +24,29 @@ public class MandrilController : ControllerBase
     {
         var mandril = MandrilDataStore.Current.Mandriles.FirstOrDefault(x => x.Id == mandrilId);
         if (mandril == null)
-        
+
             return NotFound("El Mandril no se encuentra");
 
 
-        
+
         return Ok(mandril);
-        
+
     }
 
     [HttpPost]
 
 
-    public
+    public ActionResult<Mandril> GeoMandril(int mandrilId)
+    {
+        var mandril = MandrilDataStore.Current.Mandriles.FirstOrDefault(x => x.Id == mandrilId);
+        if (mandril == null)
+
+            return NotFound("El Mandril no se encuentra");
 
 
+
+        return Ok(mandril);
 
     }
 
-  
+}
