@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36301.6
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MandrilAPI", "Mandril\MandrilAPI.csproj", "{74C0C0AB-4050-437A-9F18-7533CAFA1E5F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{74C0C0AB-4050-437A-9F18-7533CAFA1E5F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{74C0C0AB-4050-437A-9F18-7533CAFA1E5F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{74C0C0AB-4050-437A-9F18-7533CAFA1E5F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{74C0C0AB-4050-437A-9F18-7533CAFA1E5F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {DE6ACBD9-2D6C-4922-BD74-43F8594AA0BD}
+	EndGlobalSection
+EndGlobal
