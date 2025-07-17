@@ -36,17 +36,23 @@ public class MandrilController : ControllerBase
     [HttpPost]
 
 
-    public ActionResult<Mandril> GeoMandril(int mandrilId)
+    public ActionResult<Mandril> PostMandril(MandrilInsert mandrilInsert)
     {
-        var mandril = MandrilDataStore.Current.Mandriles.FirstOrDefault(x => x.Id == mandrilId);
-        if (mandril == null)
+        var maxMandrilId = MandrilDataStore.Current.Mandriles.Max(x => x.Id);
 
-            return NotFound("El Mandril no se encuentra");
+        var mandrilNuevo = new Mandril()
+        {
+            Id = maxMandrilId + 1,
+            Nombre = mandrilInsert.Nombre,
+            Apellido = mandrilInsert.Apellido
 
 
+        };
+        MandrilDataStore.Current.Mandriles.Add(mandrilNuevo);
 
-        return Ok(mandril);
+        return CreatedAtAction(nameof(GetMandril), new { mandrilId = mandrilNuevo.Id },
+            mandrilNuevo);
 
     }
-
+    
 }
