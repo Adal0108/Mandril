@@ -54,5 +54,21 @@ public class MandrilController : ControllerBase
             mandrilNuevo);
 
     }
-    
+
+    [HttpPut("{mandrilId}")]
+    public ActionResult<Mandril> PutMandril([FromRoute]int mandrilId, [FromBody] MandrilInsert mandrilInsert)
+    {
+
+        var mandril = MandrilDataStore.Current.Mandriles.FirstOrDefault(x => x.Id == mandrilId);
+        if (mandril == null)
+
+            return NotFound("El Mandril no se encuentra");
+
+        mandril.Nombre=mandrilInsert.Nombre;
+        mandril.Apellido=mandrilInsert.Apellido;
+
+        return NoContent();
+    }
+
+
 }
