@@ -70,5 +70,19 @@ public class MandrilController : ControllerBase
         return NoContent();
     }
 
+    [HttpDelete("{mandrilId}")]
+
+    public ActionResult<Mandril> DeleteMandril(int mandrilId)
+    {
+
+        var mandril = MandrilDataStore.Current.Mandriles.FirstOrDefault(x => x.Id == mandrilId);
+        if (mandril == null)
+
+            return NotFound("El Mandril no se encuentra");
+
+        MandrilDataStore.Current.Mandriles.Remove(mandril);
+
+        return NoContent();
+    }
 
 }
