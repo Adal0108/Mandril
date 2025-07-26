@@ -14,6 +14,7 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
+//rdtgdr
 //hdgf
 //joihohiu
 app.UseHttpsRedirection();
